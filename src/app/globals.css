@@ -1,2 +1,31 @@
 @import '@astryxdesign/core/reset.css';
 @import '@astryxdesign/core/astryx.css';
+
+/* Astryx tokens don't paint the page itself; give the canvas the theme's body color in both modes. */
+body {
+  background: var(--color-background-body);
+}
+
+/* On narrow phones the nav doesn't fit on one row; the "Keisha." logo already links home. */
+@media (max-width: 26rem) {
+  .nav-home {
+    display: none;
+  }
+}
+
+/* Projects info row: left / center / right like the reference, one left-aligned column on phones. */
+@media (min-width: 40rem) {
+  .meta-row > :nth-child(2) {
+    justify-self: center;
+    text-align: center;
+  }
+  .meta-row > :nth-child(3) {
+    justify-self: end;
+    text-align: end;
+  }
+}
+@media (max-width: 40rem) {
+  .meta-row {
+    grid-template-columns: 1fr;
+  }
+}

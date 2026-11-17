@@ -1,17 +1,17 @@
-import {Button} from '@astryxdesign/core/Button';
 import {Heading} from '@astryxdesign/core/Heading';
 import {Stack} from '@astryxdesign/core/Stack';
 import {Text} from '@astryxdesign/core/Text';
 
-// Placeholder that proves the design system renders; replace with the real home page.
+// Placeholder until the real home page is built.
 export default function Home() {
   return (
-    <Stack gap={4} padding={10} hAlign="start">
-      <Heading level={1}>Portfolio</Heading>
+    <Stack gap={4} paddingInline={6} paddingBlock={10} hAlign="start">
+      <Heading level={1} type="display-1">
+        Keisha
+      </Heading>
       <Text type="large" color="secondary">
-        Astryx is wired up with the neutral theme.
+        [Home page: coming soon]
       </Text>
-      <Button label="Hello Astryx" variant="primary" />
     </Stack>
   );
 }
