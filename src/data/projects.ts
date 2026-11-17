@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     title: 'Adi Indotent',
     summary:
       'Company website and CMS for a tent and event-equipment rental company in Tangerang. Staff update products and past events themselves from an admin panel.',
-    stack: ['Next.js', 'Payload CMS', 'PostgreSQL'],
+    stack: ['Next.js', 'Payload CMS', 'Neon Postgres'],
     year: 2026,
     repo: 'https://github.com/keishaaurellyy/adi-indotent',
     live: 'https://adi-indotent.com',
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     summary:
       // Team of three per the LinkedIn launch post.
       'Pre-order app for BINUS University canteens, built as a thesis project in a team of three. Students order ahead and pay with QRIS, kitchens see incoming orders live, and admins manage the kitchens.',
-    stack: ['Next.js', 'Drizzle ORM', 'PostgreSQL'],
+    stack: ['Next.js', 'Drizzle ORM', 'Neon Postgres'],
     year: 2025,
     repo: 'https://github.com/keishaaurellyy/nganteen',
     live: 'https://nganteen.vercel.app',
