@@ -14,7 +14,12 @@ body {
   font-size: min(var(--text-display-3-size), 14vw);
 }
 
-/* Home hero: intro taking the room, a fixed-width photo on the right; stacked below 48rem. */
+/* The gray shows while a lazy photo loads. Plain CSS: the theme editor refuses radius on aspect-ratio. */
+.astryx-aspect-ratio {
+  border-radius: var(--radius-container);
+  background: var(--color-background-gray);
+}
+
 @media (width >= 48rem) {
   .hero-row {
     grid-template-columns: minmax(0, 1fr) 20rem;
@@ -29,12 +34,12 @@ body {
 /* Experience rows: a fixed photo column keeps every row's text column lined up; narrower on tablets. */
 @media (width >= 64rem) {
   .job-row {
-    grid-template-columns: 4rem minmax(0, 1fr) 18rem;
+    grid-template-columns: minmax(0, 1fr) 18rem;
   }
 }
 @media (48rem <= width < 64rem) {
   .job-row {
-    grid-template-columns: 3rem minmax(0, 1fr) 14rem;
+    grid-template-columns: minmax(0, 1fr) 14rem;
   }
 }
 @media (width < 48rem) {
@@ -43,7 +48,7 @@ body {
   }
 }
 
-/* Clickable experience photos: no button chrome, the theme's corner radius and focus ring, a dim on hover. */
+/* Photo buttons look like plain images but keep the theme's focus ring. */
 .photo-thumb {
   display: block;
   width: 100%;

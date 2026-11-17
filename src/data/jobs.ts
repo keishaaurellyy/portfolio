@@ -27,7 +27,7 @@ export const JOBS: Job[] = [
     link: {label: 'heysalus.com', href: 'https://heysalus.com'},
     photos: [{src: '/experience/safework-tech-dinner.jpg', alt: 'Dinner with the SafeWork Tech team'}],
   },
-  // Summarised from commits in the Satu Dental repos (laptop backup, Oct 2026).
+  // Source: the Satu Dental repos in the Oct 2026 laptop backup.
   {
     company: 'Satu Dental',
     companyUrl: 'https://www.satudental.com',

@@ -25,13 +25,16 @@ export function PhotoGallery({photos}: {photos: Photo[]}) {
           </AspectRatio>
         </button>
       ))}
-      <Lightbox
-        isOpen={openIndex !== null}
-        onOpenChange={isOpen => !isOpen && setOpenIndex(null)}
-        media={photos.map(photo => ({...photo, caption: photo.alt}))}
-        index={openIndex ?? 0}
-        onIndexChange={setOpenIndex}
-      />
+      {/* Mounted only while open: when closed, Lightbox still loads every full-size photo on page load. */}
+      {openIndex !== null && (
+        <Lightbox
+          isOpen
+          onOpenChange={isOpen => !isOpen && setOpenIndex(null)}
+          media={photos.map(photo => ({...photo, caption: photo.alt}))}
+          index={openIndex}
+          onIndexChange={setOpenIndex}
+        />
+      )}
     </VStack>
   );
 }

@@ -22,11 +22,11 @@ export function ProjectList() {
   return (
     // 300px minimum: two columns from tablet width up, one on phones.
     <Grid columns={{minWidth: 300, max: 2, repeat: 'fit'}} gap={8}>
-      {PROJECTS.map((project, i) => (
+      {PROJECTS.map(project => (
         <VStack key={project.repo} gap={3}>
           <AspectRatio ratio={4 / 3} fit="cover">
             {project.cover ? (
-              <img src={project.cover.src} alt={project.cover.alt} />
+              <img src={project.cover.src} alt={project.cover.alt} loading="lazy" />
             ) : (
               // No screenshot for API-only work: show the stack instead of a fake image.
               <VStack hAlign="center" vAlign="center" style={{background: 'var(--color-background-gray)'}}>
@@ -37,12 +37,7 @@ export function ProjectList() {
             )}
           </AspectRatio>
           <VStack gap={2}>
-            <HStack hAlign="between" vAlign="center" gap={4}>
-              <Heading level={3}>{project.title}</Heading>
-              <Text type="large" color="secondary" hasTabularNumbers>
-                [{String(i + 1).padStart(2, '0')}]
-              </Text>
-            </HStack>
+            <Heading level={3}>{project.title}</Heading>
             <VStack gap={2}>
               <Text color="secondary">{project.summary}</Text>
               <Text type="supporting">{project.year}</Text>

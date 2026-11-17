@@ -14,12 +14,9 @@ import {JOBS} from '@/data/jobs';
 export function JobList() {
   return (
     <VStack gap={8}>
-      {JOBS.map((job, i) => (
+      {JOBS.map(job => (
         <VStack key={job.company} gap={8}>
-          <Grid columns={3} gap={6} className="job-row">
-            <Text type="supporting" hasTabularNumbers>
-              [{String(i + 1).padStart(2, '0')}]
-            </Text>
+          <Grid columns={2} gap={6} className="job-row">
             <VStack gap={4}>
               <VStack gap={1}>
                 <Heading level={3}>
