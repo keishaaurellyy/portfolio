@@ -1,2 +1,14 @@
 @import '@astryxdesign/core/reset.css';
 @import '@astryxdesign/core/astryx.css';
+
+/* Astryx tokens don't paint the page itself; give the canvas the theme's body color in both modes. */
+body {
+  background: var(--color-background-body);
+}
+
+/* On narrow phones the nav doesn't fit on one row; the "Keisha." logo already links home. */
+@media (max-width: 26rem) {
+  .nav-home {
+    display: none;
+  }
+}

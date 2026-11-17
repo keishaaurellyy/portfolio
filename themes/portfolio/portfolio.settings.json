@@ -1,0 +1,53 @@
+{
+  "name": "portfolio",
+  "like": "neutral",
+  "mode": "both",
+  "settings": [
+    {
+      "thing": "type",
+      "value": "display",
+      "source": "dial"
+    },
+    {
+      "thing": "headings",
+      "value": "tighter",
+      "source": "dial",
+      "axis": "tracking"
+    },
+    {
+      "thing": "font",
+      "value": "inter",
+      "source": "dial"
+    },
+    {
+      "thing": "corners",
+      "value": "small",
+      "source": "dial"
+    },
+    {
+      "thing": "--color-background-body",
+      "value": "#ffffff",
+      "source": "token",
+      "mode": "light"
+    },
+    {
+      "thing": "min-height",
+      "value": "44px",
+      "source": "property",
+      "on": "tab"
+    },
+    {
+      "thing": "min-height",
+      "value": "44px",
+      "source": "property",
+      "on": "top-nav-item"
+    },
+    {
+      "thing": "min-height",
+      "value": "44px",
+      "source": "property",
+      "on": "button"
+    }
+  ],
+  "lifted": []
+}

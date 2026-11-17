@@ -42,3 +42,8 @@ next-env.d.ts
 
 # claude code
 .claude/
+
+# astryx theme editor previews (regenerated on every change)
+themes/*/preview.html
+themes/*/sheet.html
+themes/*/*.png
