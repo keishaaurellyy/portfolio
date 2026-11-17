@@ -14,6 +14,12 @@ body {
   font-size: min(var(--text-display-3-size), 14vw);
 }
 
+/* Every image box (hero, project covers, work photos) gets the theme's container corners.
+   The theme editor refuses radius on aspect-ratio, though the box clips its image. */
+.astryx-aspect-ratio {
+  border-radius: var(--radius-container);
+}
+
 /* Home hero: intro taking the room, a fixed-width photo on the right; stacked below 48rem. */
 @media (width >= 48rem) {
   .hero-row {

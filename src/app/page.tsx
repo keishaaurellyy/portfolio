@@ -33,9 +33,7 @@ export default function Home() {
             </HStack>
           </VStack>
           <AspectRatio ratio={4 / 5} fit="cover">
-            <VStack hAlign="center" vAlign="center" style={{background: 'var(--color-background-gray)'}}>
-              <Text color="secondary">[Photo: coming soon]</Text>
-            </VStack>
+            <img src="/about/keisha.jpg" alt="Keisha Aurelly" fetchPriority="high" />
           </AspectRatio>
         </Grid>
 
