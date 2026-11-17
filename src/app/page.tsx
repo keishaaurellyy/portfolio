@@ -8,20 +8,18 @@ import {JobList} from '@/components/JobList';
 import {ProjectList} from '@/components/ProjectList';
 import {SocialLinks} from '@/components/SocialLinks';
 
-// The whole portfolio on one page: intro, projects, experience.
 // /projects and /experience redirect to the #projects and #experience sections (next.config.ts).
 export default function Home() {
   return (
     <VStack hAlign="center">
       <VStack gap={10} width="100%" maxWidth={1200} paddingInline={6} paddingBlock={10}>
-        {/* Intro beside the photo (columns set in .hero-row); stacked on phones. */}
+        {/* Columns come from .hero-row in globals.css. */}
         <Grid columns={2} gap={8} className="hero-row">
           <VStack gap={6} vAlign="end">
             <Heading level={1} type="display-1" className="page-title">
               Keisha Aurelly
             </Heading>
-            {/* From the LinkedIn profile (headline, education, posts) and the experience data.
-                shortcut: "nearly three years" counts from Feb 2024 (Satu Dental internship); change to "over three years" from Feb 2027. */}
+            {/* shortcut: "nearly three years" counts from Feb 2024; change to "over three years" from Feb 2027. */}
             <Text type="large">
               I&rsquo;m a software engineer with nearly three years of experience building web and mobile apps in
               TypeScript, React and Next.js. I work on SafeWork Tech through KOKOH. Before that I was at Satu Dental,

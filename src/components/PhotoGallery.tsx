@@ -7,7 +7,6 @@ import {VStack} from '@astryxdesign/core/Stack';
 
 type Photo = {src: string; alt: string};
 
-// Stacked 4:3 photos; clicking one opens it full size, with prev/next through the rest.
 // A plain button (styled as .photo-thumb in globals.css) because Astryx Thumbnail is locked to a square.
 export function PhotoGallery({photos}: {photos: Photo[]}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

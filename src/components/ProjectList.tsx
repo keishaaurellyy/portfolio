@@ -7,7 +7,7 @@ import {ExternalButton} from '@/components/ExternalButton';
 import {TechBadge} from '@/components/TechBadge';
 import {PROJECTS} from '@/data/projects';
 
-// Project cards: cover, numbered title, summary, stack and links. Titles are h3 under the page's "Projects" h2.
+// Titles are h3 under the page's "Projects" h2.
 export function ProjectList() {
   if (PROJECTS.length === 0) {
     return (

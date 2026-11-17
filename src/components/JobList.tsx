@@ -10,8 +10,7 @@ import {PhotoGallery} from '@/components/PhotoGallery';
 import {TechBadge} from '@/components/TechBadge';
 import {JOBS} from '@/data/jobs';
 
-// Rows like the reference's services list: number, details, photos (columns set in .job-row).
-// Company names are h3 under the page's "Experience" h2.
+// Columns come from .job-row in globals.css. Company names are h3 under the page's "Experience" h2.
 export function JobList() {
   return (
     <VStack gap={8}>

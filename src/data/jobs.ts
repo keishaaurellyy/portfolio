@@ -3,7 +3,7 @@ export type Job = {
   // The company's own site, linked from its name (not a claim of having built it).
   companyUrl?: string;
   role: string;
-  // The agency that employs me on this client's project, shown as "via <agency>".
+  // The agency that placed this role with the client, shown as "via <agency>".
   agency?: {name: string; url: string};
   period: string;
   points: string[];
@@ -17,7 +17,6 @@ export const JOBS: Job[] = [
   {
     company: 'SafeWork Tech',
     role: 'Full Stack Engineer',
-    // Employed by the KOKOH agency and placed on the SafeWork Tech project.
     agency: {name: 'KOKOH', url: 'https://www.kokoh.work'},
     period: 'Sep 2026 – Present',
     points: [
@@ -41,7 +40,7 @@ export const JOBS: Job[] = [
       'Also worked on the dental lab order app and the clinic check-in app.',
     ],
     stack: ['TypeScript', 'Next.js', 'Vue.js', 'Kubernetes', 'Playwright'],
-    // Link the patient web built in this role; the ERP is internal and the main satudental.com site was not part of the job.
+    // The patient web was built in this role; satudental.com itself was not.
     link: {label: 'patients.satudental.com', href: 'https://patients.satudental.com'},
     photos: [
       {src: '/experience/satu-dental-team.jpg', alt: 'The Satu Dental team in front of the office mural'},

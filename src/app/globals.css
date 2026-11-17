@@ -26,8 +26,7 @@ body {
   }
 }
 
-/* Experience rows: a slim number column, the text taking the room, and a fixed photo column
-   so every row's text column lines up. Below 64rem the parts stack. */
+/* Experience rows: a fixed photo column keeps every row's text column lined up. */
 @media (width >= 64rem) {
   .job-row {
     grid-template-columns: 4rem minmax(0, 1fr) 18rem;
