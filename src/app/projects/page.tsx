@@ -95,8 +95,8 @@ export default function ProjectsPage() {
             Projects
           </Heading>
           <Divider />
-          {/* Three columns on wide screens, one stacked column on phones. */}
-          <Grid columns={{minWidth: 200, max: 3, repeat: 'fit'}} gap={2}>
+          {/* Left / center / right on wide screens, stacked on phones (see .meta-row in globals.css). */}
+          <Grid columns={3} gap={2} className="meta-row">
             <Text type="supporting">Software Engineer</Text>
             <Text type="supporting">Based in Jakarta & Tangerang</Text>
             <Text type="supporting">
