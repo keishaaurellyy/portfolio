@@ -43,14 +43,6 @@ body {
   }
 }
 
-/* Stacked on phones, photos keep their desktop width instead of growing to a full-screen slab. */
-@media (width < 48rem) {
-  .hero-row > :last-child,
-  .job-row > :last-child {
-    max-width: 20rem;
-  }
-}
-
 /* Clickable experience photos: no button chrome, the theme's corner radius and focus ring, a dim on hover. */
 .photo-thumb {
   display: block;
