@@ -6,6 +6,7 @@ import {HStack, VStack} from '@astryxdesign/core/Stack';
 import {Heading, Text} from '@astryxdesign/core/Text';
 import {JobList} from '@/components/JobList';
 import {ProjectList} from '@/components/ProjectList';
+import {SocialLinks} from '@/components/SocialLinks';
 
 // The whole portfolio on one page: intro, projects, experience.
 // /projects and /experience redirect to the #projects and #experience sections (next.config.ts).
@@ -17,18 +18,19 @@ export default function Home() {
         <Grid columns={2} gap={8} className="hero-row">
           <VStack gap={6} vAlign="end">
             <Heading level={1} type="display-1" className="page-title">
-              Keisha
+              Keisha Aurelly
             </Heading>
-            {/* From the LinkedIn profile (headline, education, posts) and the experience data. */}
+            {/* From the LinkedIn profile (headline, education, posts) and the experience data.
+                shortcut: "nearly three years" counts from Feb 2024 (Satu Dental internship); change to "over three years" from Feb 2027. */}
             <Text type="large">
-              Software engineer with a Computer Science degree from BINUS University. I build web and mobile apps
-              with TypeScript, React and Next.js: now for SafeWork Tech through KOKOH, and before that at Satu Dental,
-              where I grew from tech intern to frontend engineer.
+              Software engineer with nearly three years of experience building web and mobile apps in TypeScript,
+              React and Next.js. Now on SafeWork Tech through KOKOH; before that at Satu Dental, where I grew from tech
+              intern to frontend engineer. Computer Science graduate from BINUS University.
             </Text>
             <Text type="supporting">Software Engineer · Based in Jakarta&nbsp;&amp;&nbsp;Tangerang</Text>
             <HStack gap={2} wrap="wrap">
               <Button label="Email me" href="mailto:keisha.aurelly16@gmail.com" variant="primary" />
-              <Button label="See my projects" href="#projects" variant="secondary" />
+              <SocialLinks />
             </HStack>
           </VStack>
           <AspectRatio ratio={4 / 5} fit="cover">
