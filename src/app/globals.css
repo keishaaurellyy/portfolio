@@ -26,15 +26,28 @@ body {
   }
 }
 
-/* Experience rows: a fixed photo column keeps every row's text column lined up. */
+/* Experience rows: a fixed photo column keeps every row's text column lined up; narrower on tablets. */
 @media (width >= 64rem) {
   .job-row {
     grid-template-columns: 4rem minmax(0, 1fr) 18rem;
   }
 }
-@media (width < 64rem) {
+@media (48rem <= width < 64rem) {
+  .job-row {
+    grid-template-columns: 3rem minmax(0, 1fr) 14rem;
+  }
+}
+@media (width < 48rem) {
   .job-row {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Stacked on phones, photos keep their desktop width instead of growing to a full-screen slab. */
+@media (width < 48rem) {
+  .hero-row > :last-child,
+  .job-row > :last-child {
+    max-width: 20rem;
   }
 }
 
