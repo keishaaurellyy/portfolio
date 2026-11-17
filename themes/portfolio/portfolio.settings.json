@@ -47,6 +47,12 @@
       "value": "44px",
       "source": "property",
       "on": "button"
+    },
+    {
+      "thing": "min-height",
+      "value": "44px",
+      "source": "property",
+      "on": "side-nav-item"
     }
   ],
   "lifted": []

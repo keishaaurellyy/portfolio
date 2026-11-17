@@ -551,6 +551,10 @@
     min-height: 44px;
   }
 
+  .astryx-side-nav-item {
+    min-height: 44px;
+  }
+
   .astryx-text[data-color="primary"] { color: var(--color-text-primary); }
 
   .astryx-heading[data-color="primary"] { color: var(--color-text-primary); }

@@ -448,6 +448,11 @@ export const portfolioTheme = {
       "base": {
         "minHeight": "44px"
       }
+    },
+    "side-nav-item": {
+      "base": {
+        "minHeight": "44px"
+      }
     }
   },
   __onDark: {

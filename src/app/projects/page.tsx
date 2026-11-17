@@ -1,39 +1,12 @@
 import {AspectRatio} from '@astryxdesign/core/AspectRatio';
-import {Divider} from '@astryxdesign/core/Divider';
 import {EmptyState} from '@astryxdesign/core/EmptyState';
 import {Grid} from '@astryxdesign/core/Grid';
-import {Button} from '@astryxdesign/core/Button';
 import {HStack, VStack} from '@astryxdesign/core/Stack';
 import {Heading, Text} from '@astryxdesign/core/Text';
-import {Token} from '@astryxdesign/core/Token';
 import type {Metadata} from 'next';
-import {siDrizzle, siNextdotjs, siPayloadcms, siPostgresql, type SimpleIcon} from 'simple-icons';
-
-// Logos for the stack badges; a tech without an entry here gets a text-only badge.
-const TECH_ICONS: Record<string, SimpleIcon> = {
-  'Next.js': siNextdotjs,
-  'Payload CMS': siPayloadcms,
-  PostgreSQL: siPostgresql,
-  'Drizzle ORM': siDrizzle,
-};
-
-function TechBadge({name}: {name: string}) {
-  const icon = TECH_ICONS[name];
-  return (
-    <Token
-      label={name}
-      color="gray"
-      icon={
-        icon && (
-          // currentColor keeps the logo monochrome so it follows the theme in light and dark mode.
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-            <path d={icon.path} />
-          </svg>
-        )
-      }
-    />
-  );
-}
+import {ExternalButton} from '@/components/ExternalButton';
+import {PageHeader} from '@/components/PageHeader';
+import {TechBadge} from '@/components/TechBadge';
 
 export const metadata: Metadata = {title: 'Projects · Keisha'};
 
@@ -71,39 +44,18 @@ const PROJECTS: Project[] = [
   },
 ];
 
-// A button rather than a text link so the tap target meets the theme's 44px minimum.
-function ExternalButton({label, href}: {label: string; href: string}) {
-  return (
-    <Button
-      label={`${label} (opens in new tab)`}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      variant="secondary"
-      size="sm">
-      {label}
-    </Button>
-  );
-}
-
 export default function ProjectsPage() {
   return (
     <VStack hAlign="center">
       <VStack gap={10} width="100%" maxWidth={1200} paddingInline={6} paddingBlock={10}>
-        <VStack gap={6}>
-          <Heading level={1} type="display-1">
-            Projects
-          </Heading>
-          <Divider />
-          {/* Left / center / right on wide screens, stacked on phones (see .meta-row in globals.css). */}
-          <Grid columns={3} gap={2} className="meta-row">
-            <Text type="supporting">Software Engineer</Text>
-            <Text type="supporting">Based in Jakarta & Tangerang</Text>
-            <Text type="supporting">
-              {PROJECTS.length} {PROJECTS.length === 1 ? 'project' : 'projects'}
-            </Text>
-          </Grid>
-        </VStack>
+        <PageHeader
+          title="Projects"
+          meta={[
+            'Software Engineer',
+            'Based in Jakarta & Tangerang',
+            `${PROJECTS.length} ${PROJECTS.length === 1 ? 'project' : 'projects'}`,
+          ]}
+        />
 
         {PROJECTS.length === 0 ? (
           <EmptyState

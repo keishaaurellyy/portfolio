@@ -6,15 +6,20 @@ body {
   background: var(--color-background-body);
 }
 
-/* On narrow phones the nav doesn't fit on one row; the "Keisha." logo already links home. */
-@media (max-width: 26rem) {
-  .nav-home {
+/* The nav links don't fit one row on phones: they move into the menu drawer there. */
+@media (width < 40rem) {
+  .nav-link {
+    display: none;
+  }
+}
+@media (width >= 40rem) {
+  .nav-menu {
     display: none;
   }
 }
 
-/* Projects info row: left / center / right like the reference, one left-aligned column on phones. */
-@media (min-width: 40rem) {
+/* Page header info row: left / center / right like the reference; on phones a single wrapping line replaces it. */
+@media (width >= 40rem) {
   .meta-row > :nth-child(2) {
     justify-self: center;
     text-align: center;
@@ -24,8 +29,53 @@ body {
     text-align: end;
   }
 }
-@media (max-width: 40rem) {
+@media (width < 40rem) {
   .meta-row {
+    display: none;
+  }
+}
+@media (width >= 40rem) {
+  .meta-line {
+    display: none;
+  }
+}
+
+/* Experience rows: a slim number column, the text taking the room, and a fixed photo column
+   so every row's text column lines up. Below 64rem the parts stack. */
+@media (width >= 64rem) {
+  .job-row {
+    grid-template-columns: 4rem minmax(0, 1fr) 18rem;
+  }
+}
+@media (width < 64rem) {
+  .job-row {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Clickable experience photos: no button chrome, the theme's corner radius and focus ring, a dim on hover. */
+.photo-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--radius-container);
+  overflow: hidden;
+}
+.photo-thumb img {
+  transition: opacity 150ms;
+}
+.photo-thumb:hover img {
+  opacity: 0.85;
+}
+.photo-thumb:focus-visible {
+  outline: var(--focus-outline-width) var(--focus-outline-style) var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-thumb img {
+    transition: none;
   }
 }
