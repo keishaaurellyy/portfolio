@@ -11,7 +11,7 @@ export function JobMeta({job}: {job: Job}) {
       {job.agency && (
         <>
           via{' '}
-          <Link href={job.agency.url} target="_blank" color="inherit" type="inherit">
+          <Link href={job.agency.url} target="_blank" color="inherit" type="inherit" hasUnderline>
             {job.agency.name}
             <VisuallyHidden> (opens in new tab)</VisuallyHidden>
           </Link>{' '}

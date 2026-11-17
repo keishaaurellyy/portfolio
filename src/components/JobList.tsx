@@ -25,7 +25,7 @@ export function JobList() {
                 <Heading level={3}>
                   {job.companyUrl ? (
                     // No external-link icon (it looked out of scale next to the title); the new-tab note stays for screen readers.
-                    <Link href={job.companyUrl} target="_blank" color="inherit" type="inherit">
+                    <Link href={job.companyUrl} target="_blank" color="inherit" type="inherit" hasUnderline>
                       {job.company}
                       <VisuallyHidden> (opens in new tab)</VisuallyHidden>
                     </Link>
