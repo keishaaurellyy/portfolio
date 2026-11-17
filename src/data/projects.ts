@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Adi Indotent',
     summary:
-      'Company website and CMS for a tent and event-equipment rental company in Tangerang. Staff update products and past events from an admin panel, with no code changes.',
+      'Company website and CMS for a tent and event-equipment rental company in Tangerang. Staff update products and past events themselves from an admin panel.',
     stack: ['Next.js', 'Payload CMS', 'PostgreSQL'],
     year: 2026,
     repo: 'https://github.com/keishaaurellyy/adi-indotent',
@@ -23,7 +23,8 @@ export const PROJECTS: Project[] = [
   {
     title: 'Nganteen',
     summary:
-      'Pre-order app for BINUS University canteens. Students order ahead and pay with QRIS, kitchens see incoming orders live, and admins manage the kitchens.',
+      // Team of three per the LinkedIn launch post.
+      'Pre-order app for BINUS University canteens, built as a thesis project in a team of three. Students order ahead and pay with QRIS, kitchens see incoming orders live, and admins manage the kitchens.',
     stack: ['Next.js', 'Drizzle ORM', 'PostgreSQL'],
     year: 2025,
     repo: 'https://github.com/keishaaurellyy/nganteen',

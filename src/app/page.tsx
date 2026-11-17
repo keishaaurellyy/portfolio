@@ -23,11 +23,12 @@ export default function Home() {
             {/* From the LinkedIn profile (headline, education, posts) and the experience data.
                 shortcut: "nearly three years" counts from Feb 2024 (Satu Dental internship); change to "over three years" from Feb 2027. */}
             <Text type="large">
-              Software engineer with nearly three years of experience building web and mobile apps in TypeScript,
-              React and Next.js. Now on SafeWork Tech through KOKOH; before that at Satu Dental, where I grew from tech
-              intern to frontend engineer. Computer Science graduate from BINUS University.
+              I&rsquo;m a software engineer with nearly three years of experience building web and mobile apps in
+              TypeScript, React and Next.js. I work on SafeWork Tech through KOKOH. Before that I was at Satu Dental,
+              where I started as a tech intern and became a frontend engineer. I studied Computer Science at BINUS
+              University.
             </Text>
-            <Text type="supporting">Software Engineer · Based in Jakarta&nbsp;&amp;&nbsp;Tangerang</Text>
+            <Text type="supporting">Based in Jakarta&nbsp;&amp;&nbsp;Tangerang</Text>
             <HStack gap={2} wrap="wrap">
               <Button label="Email me" href="mailto:keisha.aurelly16@gmail.com" variant="primary" />
               <SocialLinks />
