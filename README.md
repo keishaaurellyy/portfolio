@@ -3,6 +3,8 @@
   <img src=".github/screenshot-light.webp" alt="The home page of my portfolio: my name, a short intro, contact buttons and a photo, with the Projects section below." />
 </picture>
 
+Live at **[keishaaurelly.vercel.app](https://keishaaurelly.vercel.app)**.
+
 ## Built with
 
 - [Next.js](https://nextjs.org) (App Router), React and TypeScript
