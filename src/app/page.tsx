@@ -6,12 +6,29 @@ import {HStack, VStack} from '@astryxdesign/core/Stack';
 import {Heading, Text} from '@astryxdesign/core/Text';
 import {JobList} from '@/components/JobList';
 import {ProjectList} from '@/components/ProjectList';
-import {SocialLinks} from '@/components/SocialLinks';
+import {SOCIAL_LINKS, SocialLinks} from '@/components/SocialLinks';
+import {SITE_URL} from '@/site';
+
+// Structured data so search engines can tie this page to the same person on LinkedIn and GitHub.
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Keisha Aurelly',
+  jobTitle: 'Software Engineer',
+  url: SITE_URL,
+  image: `${SITE_URL}/about/keisha.jpg`,
+  sameAs: SOCIAL_LINKS.map(link => link.href),
+  alumniOf: {'@type': 'CollegeOrUniversity', name: 'BINUS University'},
+};
 
 // /projects and /experience redirect to the #projects and #experience sections (next.config.ts).
 export default function Home() {
   return (
     <VStack hAlign="center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(personJsonLd).replace(/</g, '\\u003c')}}
+      />
       <VStack gap={10} width="100%" maxWidth={1200} paddingInline={6} paddingBlock={10}>
         {/* Columns come from .hero-row in globals.css. */}
         <Grid columns={2} gap={8} className="hero-row">
